@@ -1,0 +1,77 @@
+# Compiled class files
+*.class
+
+# Logs
+logs/
+*.log
+debug.log
+error.log
+hs_err_pid*
+
+# Target directory
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Maven specific files
+.mvn/
+!mvn/wrapper/maven-wrapper.jar
+
+# Gradle specific files
+.gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Eclipse specific files
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+# IntelliJ IDEA specific files
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# NetBeans specific files
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Visual Studio Code specific files
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.test
+.env.development
+*.env
+
+# Java dependencies
+*.jar
+*.war
+*.ear
+
+# Test reports
+/test-output/
+surefire-reports/
+failsafe-reports/
+
+# SonarQube
+.sonar/
+
+# Lombok config
+lombok.config
