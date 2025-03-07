@@ -1,0 +1,103 @@
+<div class="container mt-5">
+  <div class="card shadow-lg">
+    <div
+      class="card-header bg-success bg-gradient bg-opacity-75 text-white text-center"
+    >
+      <h2 class="fw-bold">Update Task</h2>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="updateTask()">
+        <div class="mb-3">
+          <label for="id" class="form-label fw-bold">ID</label>
+          <input
+            type="text"
+            id="id"
+            class="form-control"
+            [(ngModel)]="tObj.id"
+            name="id"
+            readonly
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="title" class="form-label fw-bold">Title</label>
+          <input
+            type="text"
+            id="title"
+            class="form-control"
+            [(ngModel)]="tObj.title"
+            name="title"
+            required
+            placeholder="Enter Task Title"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="desc" class="form-label fw-bold">Description</label>
+          <textarea
+            id="desc"
+            class="form-control"
+            [(ngModel)]="tObj.description"
+            name="desc"
+            required
+            placeholder="Write Description Here..."
+            rows="3"
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="dueDate" class="form-label fw-bold">Due Date</label>
+          <input
+            type="date"
+            id="dueDate"
+            class="form-control"
+            [(ngModel)]="tObj.dueDate"
+            name="dueDate"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label fw-bold">Status</label>
+          <div>
+            <div class="form-check form-check-inline">
+              <input
+                type="radio"
+                id="pending"
+                class="form-check-input"
+                [(ngModel)]="tObj.status"
+                name="status"
+                value="Pending"
+              />
+              <label class="form-check-label" for="pending">Pending</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                type="radio"
+                id="completed"
+                class="form-check-input"
+                [(ngModel)]="tObj.status"
+                name="status"
+                value="Completed"
+              />
+              <label class="form-check-label" for="completed">Completed</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-success px-4 me-3">
+            <i class="fas fa-sync-alt"></i> Update
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary px-4"
+            (click)="goBack()"
+          >
+            <i class="fas fa-arrow-left"></i> Back
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

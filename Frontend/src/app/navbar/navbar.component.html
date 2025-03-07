@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-white" href="#">
+      <i class="fas fa-tasks me-2"></i> Task Management
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto">
+        <a
+          class="nav-item nav-link fw-semibold px-4 mx-2"
+          routerLink="/create-task"
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <i class="fas fa-plus-circle me-1"></i> Create Task
+        </a>
+
+        <a
+          class="nav-item nav-link fw-semibold px-4 mx-2"
+          routerLink="/list-tasks"
+          routerLinkActive="active-link"
+        >
+          <i class="fas fa-list me-1"></i> View Tasks
+        </a>
+        <a
+          *ngIf="isLoggedIn()"
+          class="nav-item nav-link px-4 mx-2 fw-semibold logout-hover"
+          (click)="logout()"
+          style="cursor: pointer"
+        >
+          <i class="fas fa-sign-out-alt me-1"></i> Logout
+        </a>
+
+        <a
+          *ngIf="!isLoggedIn() && !isLoginPage()"
+          class="nav-item nav-link px-4 mx-2 fw-semibold login-hover"
+          routerLink="/login"
+        >
+          <i class="fas fa-sign-in-alt me-1"></i> Login
+        </a>
+
+        <a
+          *ngIf="!isLoggedIn() && isLoginPage()"
+          class="nav-item nav-link px-4 mx-2 fw-semibold register-hover"
+          routerLink="/register"
+        >
+          <i class="fas fa-user-plus me-1"></i> Register
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

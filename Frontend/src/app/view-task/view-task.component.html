@@ -1,0 +1,55 @@
+<div class="container mt-5">
+  <div class="card shadow-lg">
+    <div
+      class="card-header bg-success bg-gradient bg-opacity-75 text-white text-center"
+    >
+      <h2 class="fw-bold">Task Details</h2>
+    </div>
+    <div class="card-body">
+      <div class="mb-3">
+        <p class="fw-bold">
+          <i class="fas fa-hashtag"></i> Task ID:
+          <span class="fw-normal">{{ task.id }}</span>
+        </p>
+      </div>
+      <div class="mb-3">
+        <p class="fw-bold">
+          <i class="fas fa-tasks"></i> Title:
+          <span class="fw-normal">{{ task.title }}</span>
+        </p>
+      </div>
+      <div class="mb-3">
+        <p class="fw-bold">
+          <i class="fas fa-align-left"></i> Description:
+          <span class="fw-normal">{{ task.description }}</span>
+        </p>
+      </div>
+      <div class="mb-3">
+        <p class="fw-bold">
+          <i class="fas fa-calendar-alt"></i> Due Date:
+          <span class="fw-normal">{{ task.dueDate }}</span>
+        </p>
+      </div>
+      <div class="mb-3">
+        <p class="fw-bold">
+          <i class="fas fa-info-circle"></i> Status:
+          <span
+            class="badge"
+            [ngClass]="{
+              'bg-success': task.status === 'Completed',
+              'bg-warning': task.status === 'Pending'
+            }"
+          >
+            {{ task.status }}
+          </span>
+        </p>
+      </div>
+
+      <div class="text-center">
+        <button class="btn btn-secondary px-4" (click)="backToList()">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
