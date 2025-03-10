@@ -1,7 +1,7 @@
-# <p align="center">📝 Task Management Application  </p>
+# <p align="center">📝 FocusFlow  </p>
 
 ## 📌 Project Overview  
-The **Task Management Application** is a web-based tool that helps users efficiently manage their tasks in a to-do list format. It allows users to create, update, delete, and view tasks while also providing user authentication features. The application uses **SweetAlert2 (Swal)** for user-friendly alerts.  
+The **FocusFlow** is a web-based tool that helps users efficiently manage their tasks in a to-do list format. It allows users to create, update, delete, and view tasks while also providing user authentication features. The application uses **SweetAlert2 (Swal)** for user-friendly alerts.  
 
 ## 🛠 Tech Stack  
 - 🎨 **Frontend:** Angular, Bootstrap  
